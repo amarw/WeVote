@@ -56,6 +56,15 @@ export default ({ navigation }) => {
         )
     }
 
+    const onClickAddQuestion = () => {
+        const onSuccess = (question) => {
+            if (question) {
+                setQuestions([question, ...questions])
+            }
+        };
+        navigation.navigate('AddQuestionScreen', { onSuccess });
+    };
+
     return (
         <SafeAreaView style={styles.container}>
             <FlatGrid
@@ -64,7 +73,7 @@ export default ({ navigation }) => {
                 spacing={16}
                 items={questions}
                 renderItem={renderQuestion}
-                ListHeaderComponent={<Header title="Questions" />}
+                ListHeaderComponent={<Header title="Questions" showButton onButtonPress={onClickAddQuestion} />}
                 refreshing={refresh}
                 onRefresh={onRefresh}
             />

@@ -1,11 +1,18 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 export const Divider = () => <View style={styles.divider} />
 
 export default ({ title, style, titleStyle, showButton, onButtonPress, ...otherProps }) => (
     <View {...otherProps} style={[{ marginBottom: 16 }, style]} >
-        <Text style={[styles.header, titleStyle]}>{title}</Text>
+        <View style={styles.container}>
+            <Text style={[styles.header, titleStyle]}>{title}</Text>
+            {showButton && (
+                <TouchableOpacity activeOpacity={0.9} onPress={onButtonPress}>
+                    <Text style={styles.header}>+</Text>
+                </TouchableOpacity>
+            )}
+        </View>
         <Divider />
     </View>
 )
