@@ -1,0 +1,17 @@
+{
+  "name": "WeVote",
+  "displayName": "WeVote",
+  "expo": {
+    "name": "WeVote",
+    "slug": "WeVote",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
