@@ -4993,6 +4993,11 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.5"
 
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+
 morgan@^1.9.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.10.0.tgz#091778abc1fc47cd3509824653dae1faab6b17d7"
@@ -5741,6 +5746,13 @@ react-native-screens@~2.2.0:
   integrity sha512-a0VzxOWot7F9B/GQyDSssBRd3jUJazFnTQS61IiyReWB6aHlFhf3Xz10jBRoURXy1EMCDCHgenmTVTkKHpKyqQ==
   dependencies:
     debounce "^1.2.0"
+
+react-native-super-grid@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-super-grid/-/react-native-super-grid-3.2.0.tgz#207c18d2061fe7e18be3937ce900c7dfd5ec21a2"
+  integrity sha512-jsDnHJ4H+Qas/PUlBOWrSQ6HgYRmmOBLDFg+k2UWVew2pI5EOWF+3/U577ypMrowUaurmeRsP8VCXHCH2mdnDQ==
+  dependencies:
+    prop-types "^15.6.0"
 
 react-native-unimodules@~0.9.0:
   version "0.9.0"
