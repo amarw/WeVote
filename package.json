@@ -5,7 +5,7 @@
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest --detectOpenHandles --forceExit"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.9",
@@ -31,10 +31,21 @@
     "@babel/core": "~7.9.0",
     "babel-jest": "~25.2.6",
     "jest": "~25.2.6",
+    "react-native-testing-library": "^1.13.0",
     "react-test-renderer": "~16.9.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation|@react-navigation.*|@react-native-community/masked-view)"
+    ],
+    "setupFiles": [
+      "./__tests__/setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "__tests__/setup.js",
+      "node_modules"
+    ]
   },
   "private": true
 }

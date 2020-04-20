@@ -48,6 +48,7 @@ export default ({ navigation }) => {
         }
         return (
             <ListItemView
+                testID="question_list_item"
                 question={question}
                 choiceCount={choices.length}
                 date={formatted}
@@ -68,12 +69,20 @@ export default ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <FlatGrid
+                testID="questions_list"
                 keyExtractor={keyExtractor}
                 itemDimension={SIZE}
                 spacing={16}
                 items={questions}
                 renderItem={renderQuestion}
-                ListHeaderComponent={<Header title="Questions" showButton onButtonPress={onClickAddQuestion} />}
+                ListHeaderComponent={
+                    <Header
+                        testID="question_screen_header"
+                        title="Questions"
+                        onButtonPress={onClickAddQuestion}
+                        showButton
+                    />
+                }
                 refreshing={refresh}
                 onRefresh={onRefresh}
             />

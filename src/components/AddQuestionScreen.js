@@ -93,8 +93,9 @@ export default ({ navigation }) => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Header title="Add Question"/>
+            <Header testID="add_question_screen_header" title="Add Question"/>
             <KeyboardAwareFlatList
+                testID="add_question_list"
                 data={choices}
                 keyExtractor={keyExtractor}
                 renderItem={renderChoiceInputItem}

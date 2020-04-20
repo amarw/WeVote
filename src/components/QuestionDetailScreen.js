@@ -69,7 +69,7 @@ export default ({ navigation }) => {
     }
 
     const renderHeaderView = () => (
-        <View style={styles.headerViewContainer}>
+        <View testID="question_detail_header" style={styles.headerViewContainer}>
             <Text style={[{ fontWeight: 'bold'}, styles.headerViewText]}>
                 Question:
                 <Text style={{ fontWeight: 'normal'}}> {questionTitle}</Text>
@@ -89,6 +89,7 @@ export default ({ navigation }) => {
         <SafeAreaView style={styles.container}>
             <Header title="Questions Detail" />
             <FlatList
+                testID="question_detail_list"
                 data={question.choices}
                 numOfColumns={4}
                 renderItem={renderChoiceItem}
